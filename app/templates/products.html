@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/table.html' import render_table %}
+
+{% block content %}
+    <div class="container"> 
+        <a href="/add_product">Add new product</a>
+    </div>
+    {{ render_table(data) }}
+{% endblock %}

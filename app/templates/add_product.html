@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+
+
+{% block content %}
+    <div class="content-section">
+        {{ render_form(form) }}
+    </div>
+{% endblock %}

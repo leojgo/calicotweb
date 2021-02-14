@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row clearfix">
+    {% for item in products %}
+    <div class="col-lg-3 col-md-4 col-sm-12">
+        <div class="card product_item">
+            <div class="body">
+                <div class="cp_img">
+                    {% if not item.photo_url  %}
+                    <img src="{{ url_for('static', filename='nopicture.jpg')}}">
+                    {% else %}
+                    <img src="{{ item.photo_url }}" alt="Product" class="img-fluid">
+                    {% endif %}
+                    <div class="hover">
+                    </div>
+                </div>
+                <div class="product_details">
+                    <h5><a href="/product/{{item.id}}">{{item.name}}</a></h5>
+                    <ul class="product_price list-unstyled">                        
+                        <li class="new_price">{{item.price}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
