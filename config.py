@@ -6,7 +6,7 @@ class Config(object):
     # Database configuration
     #  TODO: later to change to a file => 'sqlite:///' + os.path.join(basedir, 'calicotdb.db')+"?mode=memory&cache=shared"
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        'sqlite://'
+        'postgresql:///calicotdb'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Cryptographic key
