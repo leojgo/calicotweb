@@ -130,3 +130,9 @@ dmypy.json
 
 #Flask environment variables
 .flaskenv
+
+# exclude everything
+product_pics/*
+
+# exception to the rule
+!product_pics/.gitkeep 

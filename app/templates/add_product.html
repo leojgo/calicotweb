@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
-{% from 'bootstrap/form.html' import render_form %}
+{% from 'bootstrap/form.html' import render_field %}
 
 
 {% block content %}
     <div class="content-section">
-        {{ render_form(form) }}
+        <form method="post" action="" enctype="multipart/form-data">
+        {{ form.csrf_token() }}
+        {{ render_field(form.name) }}
+        {{ render_field(form.description) }}
+        {{ render_field(form.price) }}
+        {{ render_field(form.photo_url) }}
+        {{ render_field(form.submit) }}
+        </form>        
     </div>
 {% endblock %}

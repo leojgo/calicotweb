@@ -27,7 +27,7 @@ body {
 
   /* Products */
   .img-fluid {
-    max-width: 75%;
+    max-height: 240px;
     height: auto;
 }
   .product_item:hover .cp_img {
