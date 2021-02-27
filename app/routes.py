@@ -8,7 +8,6 @@ from app.models import Product
 @app.route('/')
 @app.route('/index')
 def index():
-    db.create_all()
     all_products = Product.query.all()
     return render_template("index.html", products=all_products)
 
