@@ -14,6 +14,10 @@ class Config(object):
     # Cryptographic key
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'voce-nunca-vai-adivinhar-esta-senha'
 
+    #Azure Storage
+    AZURE_STORAGE_CONNECTION_STRING = os.environ.get('AZURE_STORAGE_CONNECTION_STRING')
+    PRODUCT_IMAGES_CONTAINER = os.environ.get('PRODUCT_IMAGES_CONTAINER')
+
 class ProductionConfig(Config):
     if database_url:
         params = urllib.parse.quote_plus(database_url)
